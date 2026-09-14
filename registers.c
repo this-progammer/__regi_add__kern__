@@ -7,18 +7,25 @@
 /*register value*/
 #define _MOV 0x1
 
+/*&=reg_tbl=&*/
 struct reg_tbl {
     int mov;
     int vm; /*video mode*/
 };
 
+/*vm_set_value()*/
 int vm_set_value( struct reg_tbl* r , int ah ) {
-    char line[1024] = (char*)("%i %i, %ah", r->mov, r->vm, ah);
+    char line[16] = (char*)("%i %i, %i", r->mov, r->vm, ah);
         if( ah == 0x0E ) {
+            for( int i = 0; i < 16; i++ ) {
+                *line[i][sizeof(16) - ah] = "0x0E";
+            }
             return _ASCII;
         }
+    return ah;
 }
 
+/*mov_vm_value()*/
 int mov_vm_value( struct reg_tbl* r ) {
         if( r->mov && r->vm ) {
         }
