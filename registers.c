@@ -12,11 +12,17 @@ struct reg_tbl {
     int vm; /*video mode*/
 };
 
-void mov_vm_value( struct reg_tbl* r ) {
-        if( r->mov && r->vm ) {
-            (char*)("mov");
-            (char*)("vm");
+int vm_set_value( struct reg_tbl* r , int ah ) {
+    char line[1024] = (char*)("%i %i, %ah", r->mov, r->vm, ah);
+        if( ah == 0x0E ) {
+            return _ASCII;
         }
+}
+
+int mov_vm_value( struct reg_tbl* r ) {
+        if( r->mov && r->vm ) {
+        }
+    return _MOV;
 }
 
 
