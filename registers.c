@@ -13,12 +13,9 @@ struct reg_tbl {
 };
 
 void mov_vm_value( struct reg_tbl* r ) {
-    char mov_ascii[3] = "mov";
-    char vm_ascii[2] = "vm";
-        for( int i = 0 ; i < r->mov; i++ ) {
-                while( r->mov != 0 ) {
-                    _ASCII << mov_ascii;
-                }
+        if( r->mov && r->vm ) {
+            (char*)("mov");
+            (char*)("vm");
         }
 }
 
