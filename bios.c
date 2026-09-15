@@ -31,3 +31,12 @@ int get_boot_sector_bits( struct bios_k* k ) {
 dword get_end_org( struct bios_k* k ) {
     return k->end_org;
 }
+
+/*set_bs_address()*/
+void set_bs_address( struct bios_k* k, dword adr ) {
+    for( int i = 0; i <= 0; i++ ) {
+         dword*& addr = adr;
+         *k->bs_org = addr;
+    }
+  get_boot_sector_org( k );
+}
