@@ -13,6 +13,20 @@ struct reg_tbl {
     int vm; /*video mode*/
 };
 
+/*cpu_read_mov_reg()*/
+int cpu_read_mov_reg() {
+   int mov = _MOV;
+   while( mov ) {
+           if( mov >> (int)(0x1) ) {
+               static struct cpu, * __cpu_ptr;
+               for(;; __cpu_ptr ) {
+                   memset(&mov, 0x1, &__cpu_ptr);
+               }
+           }
+   }
+ return 0x1;
+}
+
 /*vm_set_value()*/
 int vm_set_value( struct reg_tbl* r , int ah ) {
     char line[16] = (char*)("%i %i, %i", r->mov, r->vm, ah);
