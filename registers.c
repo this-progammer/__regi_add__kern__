@@ -34,7 +34,7 @@ int vm_set_value( struct reg_tbl* r , int ah ) {
             for( int i = 0; i < 16; i++ ) {
                 *line[i][sizeof( 16 ) - ah] = "0x0E";
             }
-            return _ASCII;
+          return _ASCII;
         }
     return ah;
 }
