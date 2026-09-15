@@ -15,3 +15,13 @@ static struct bios_k {
 dword get_boot_sector_org( struct bios_k* k ) {
     return k->bs_org;
 }
+
+/*get_boot_sector_bits()*/
+int get_boot_sector_bits( struct bios_k* k ) {
+    return k->bs_bits;
+}
+
+/*get_end_org()*/
+dword get_end_org( struct bios_k* k ) {
+    return k->end_org;
+}
