@@ -40,3 +40,19 @@ void set_bs_address( struct bios_k* k, dword adr ) {
     }
   get_boot_sector_org( k );
 }
+
+/*set_boot_sector_bits()*/
+void set_boot_sector_bits( struct bios_k* k, int bits ) {
+    for( int i = 0; i < bits; i++ ) {
+         *k->bs_bits = bits;
+    }
+  get_boot_sector_bits( k );
+}
+
+/*set_end_org()*/
+void set_end_org( bios_k* k, dword org ) {
+    for( int i = 0; i <= 0; i++ ) {
+        *k->end_org = org;
+    }
+ get_end_org( k );
+}
