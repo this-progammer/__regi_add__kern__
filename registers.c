@@ -17,12 +17,12 @@ struct reg_tbl {
 int cpu_read_mov_reg() {
    int mov = _MOV;
    while( mov ) {
-           if( mov >> (int)(0x1) ) {
-               static struct cpu, * __cpu_ptr;
-               for(;; __cpu_ptr ) {
-                   memset(&mov, 0x1, &__cpu_ptr);
-               }
-           }
+    if( mov >> (int)(0x1) ) {
+        static struct cpu, * __cpu_ptr;
+        for(;; __cpu_ptr ) {
+           memset(&mov, 0x1, &__cpu_ptr);
+        }
+    }
    }
  return 0x1;
 }
@@ -32,7 +32,7 @@ int vm_set_value( struct reg_tbl* r , int ah ) {
     char line[16] = (char*)("%i %i, %i", r->mov, r->vm, ah);
         if( ah == 0x0E ) {
             for( int i = 0; i < 16; i++ ) {
-                *line[i][sizeof(16) - ah] = "0x0E";
+                *line[i][sizeof( 16 ) - ah] = "0x0E";
             }
             return _ASCII;
         }
@@ -49,5 +49,6 @@ int mov_vm_value( struct reg_tbl* r ) {
 
 /*main()*/
 int main( int argc, char**argv[] ) {
+    cpu_read_mov_reg();
     return 0;
 }
