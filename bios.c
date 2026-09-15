@@ -2,14 +2,20 @@
 #define BIOS_C
 
 /*dword*/
-#define dword unsigned int
+typedef uint32_t dword;
 
 /*boot sector info*/
-static struct bios_k {
-    dword bs_org = 0x7C00; /*boot sector address*/
-    int bs_bits = 16; /*real mode*/
-    dword end_org = 0x55AA;/*end of 512 KB boot sector*/
+struct bios_k {
+    dword bs_org; /*boot sector address*/
+    int bs_bits; /*real mode*/
+    dword end_org;/*boot sector signature*/
 };
+
+static bios_k* bios_skel {
+    .bs_org = 0x7C00;
+    .bs_bits = 16;
+    .end_org = 0x55AA;
+}
 
 /*get_boot_sector_org()*/
 dword get_boot_sector_org( struct bios_k* k ) {
