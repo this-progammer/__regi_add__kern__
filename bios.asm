@@ -1,6 +1,13 @@
 ;  *bios.asm
 
-section .000000  section .data
-section .000001  __bios_org : DWORD 10h
-section .000002   BIOS_K:
-section .000003      mov ebx, DWORD PTR __bios_org
+.data
+  __bios_mem_addr : DWORD 10h
+
+.code
+FETCH_BIOS PROC:
+
+      mov edx, DWORD PTR[__bios_mem_addr]
+      jxx NULL
+      jmp [edx]
+
+      ret
