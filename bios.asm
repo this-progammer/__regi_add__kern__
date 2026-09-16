@@ -7,7 +7,7 @@
 FETCH_BIOS PROC:
 
       mov edx, DWORD PTR[__bios_mem_addr]
-      lne, [DWORD PTR]
+      le, [DWORD PTR]
       jmp [edx]
 
       ret
