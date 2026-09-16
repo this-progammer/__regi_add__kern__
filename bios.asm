@@ -11,3 +11,4 @@ FETCH_BIOS PROC:
       jmp [edx]
 
       ret
+FETCH_BIOS ENDP
