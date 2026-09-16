@@ -3,5 +3,7 @@
 
 PAGE:
 
-  mov borg, 0x10
-  mov bpg, 0x08000Eh
+    mov borg, 0x10
+    mov bpg, 0x08000Eh
+
+    kernl
