@@ -6,4 +6,5 @@
     mov borg, 0x10
     mov bpg, 0x800h
 
-    kernl
+    callkernel
+
