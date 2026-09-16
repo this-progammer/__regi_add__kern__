@@ -4,6 +4,6 @@
 .PAGE
 
     mov borg, 0x10
-    mov bpg, 0x08000Eh
+    mov bpg, 0x800h
 
     kernl
