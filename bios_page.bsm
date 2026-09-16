@@ -1,7 +1,7 @@
 ; * BIOS ASSEMBLY
 ;  bios_page.bsm
 
-PAGE:
+.PAGE
 
     mov borg, 0x10
     mov bpg, 0x08000Eh
